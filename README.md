@@ -212,3 +212,8 @@ To build docker images from Dockerfile
 * `docker build -t <tag-name:version> <path-to-the-Dockerfile>`. 
     - Example: `docker build -t awesomeapp:1.0 .`
 
+----
+To connect to docker instance in the interactive mode
+----
+* `docker exec -it <container-id> <your-shell>`
+* Example: `docker exec -it 8599a3a82853 /bin/sh`
