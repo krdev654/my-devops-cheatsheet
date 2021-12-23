@@ -174,3 +174,25 @@ To remove a docker image from docker images
 To pull an image
 ---
 * `docker pull <image-name>`
+
+----
+To list all docker network in the machine
+----
+* `docker network ls`
+
+----
+To create a network
+---
+* `docker network create <network-name>`
+
+----
+To remove a network
+---
+* `docker network rm <network-name>`
+
+---
+To get the docker container logs
+---
+* `docker logs <container-id>`
+
+
