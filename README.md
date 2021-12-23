@@ -34,7 +34,7 @@ List images
 Run a docker image or create a contianer
 -------
 * `docker run <image-name>`
-* Sample command: `docker run -d reddis`
+* Sample command: `docker run -d -p 80:80 docker/getting-started`
 * Options:
 ```
       --add-host list                  Add a custom host-to-IP mapping (host:ip)
