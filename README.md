@@ -195,4 +195,14 @@ To get the docker container logs
 ---
 * `docker logs <container-id>`
 
+# Docker Compose
+
+---
+To create docker container(s) from yaml configuration files 
+---
+#### Refer to the `sample-docker-compose.yaml` in this repo
+
+* `docker-compose -f <file-name.yaml> up` - This will create all the container and their dependencies, link them as configured in the yaml file
+* `docker-compose -f <file-name.yaml' down` - Will stop and tear down all the container and other resources created using docker compose up
+
 
