@@ -217,3 +217,10 @@ To connect to docker instance in the interactive mode
 ----
 * `docker exec -it <container-id> <your-shell>`
 * Example: `docker exec -it 8599a3a82853 /bin/sh`
+
+----
+### IMPORTANT NOTE: For Mac Users, to check the volumes in the host (since mac uses a linux VM to support docker, we need to ssh to the VM instance
+--------
+* `docker run -it --rm --privileged --pid=host alpine:edge nsenter -t 1 -m -u -n -i sh`
+
+
