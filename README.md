@@ -206,3 +206,9 @@ To create docker container(s) from yaml configuration files
 * `docker-compose -f <file-name.yaml' down` - Will stop and tear down all the container and other resources created using docker compose up
 
 
+----
+To build docker images from Dockerfile
+----
+* `docker build -t <tag-name:version> <path-to-the-Dockerfile>`. 
+    - Example: `docker build -t awesomeapp:1.0 .`
+
