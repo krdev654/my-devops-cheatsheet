@@ -169,3 +169,8 @@ To remove a docker container
 To remove a docker image from docker images
 ----
 * `docker rmi <image-name>`
+
+----
+To pull an image
+---
+* `docker pull <image-name>`
