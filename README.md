@@ -219,6 +219,26 @@ To connect to docker instance in the interactive mode
 * Example: `docker exec -it 8599a3a82853 /bin/sh`
 
 ----
+To check the docker health, stats, events, log
+-----
+* Events: `docker events`
+* Get top process: `docker top <contianer-id>`
+* Docker Continer Stats: `docker stats`
+* Get Logs: `docker container logs <container-id>`
+* Disk Usage: `docker system df`
+* To clear unused containers: `docker system prune`
+
+```
+Note: To assign memory and cpu quota for a container
+
+docker run -d -p 5001:5000 -m 512m --cpu-quota 5000 <image>
+
+- max cpu quota = 100000, to assign 5% cpu = 5000
+- memory can be specified as m for mb and G for gb
+
+```
+
+----
 ### IMPORTANT NOTE: For Mac Users, to check the volumes in the host (since mac uses a linux VM to support docker, we need to ssh to the VM instance
 --------
 * `docker run -it --rm --privileged --pid=host alpine:edge nsenter -t 1 -m -u -n -i sh`
