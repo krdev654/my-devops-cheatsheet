@@ -214,3 +214,4 @@ Notes:
 * To create a base64 encoding from commandLine
     - `echo -n '<plain-text>' | base64`
 * To assign an external ip in minikube: `minikube service <service-name>`
+* To enable ingress controller in minikube - `minikube addons enable ingress`
