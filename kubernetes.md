@@ -14,7 +14,38 @@ Kubernetes Commands:
   - To ssh into a container/pod: `kubectl exec -it <pod-name> -- bin/bash`. `bin/bash` is the shell of the container
   - To delete a deployment: `kubectl delete deployment <deployment-name>`
  
-
+ ----
+ ### Create and configure deployments using YAML files
+ ---
+ * Define the deployment information in an YAML file. For example: 
+    ```
+      ### my-deployment.yaml
+      apiVersion: apps/v1
+      kind: Deployment
+      metadata:
+        name: nginx-deployment
+      spec:
+        replicas: 1
+        selector:
+          matchLabels:
+            app: nginx
+        template:
+          metadata:
+            labels:
+              app: nginx
+          spec:
+            containers:
+            - name: nginx
+              image: nginx:1.16
+              resources:
+                limits:
+                  memory: "128Mi"
+                  cpu: "500m"
+              ports:
+              - containerPort: 80
+  
+    ```
+* Apply the configuration using: `kubectl apply -f my-deployment.yaml`
 ------
 ### Sample startup application
 -----
