@@ -215,3 +215,6 @@ Notes:
     - `echo -n '<plain-text>' | base64`
 * To assign an external ip in minikube: `minikube service <service-name>`
 * To enable ingress controller in minikube - `minikube addons enable ingress`
+* To spinoff a dashboard in minikube - `minikube dashboard`
+* To Start/stop/pause minikube cluster - `minikube start|stop|pause|unpause`
+* To clean up all the clusters in the minikube - `minikube delete --all`
