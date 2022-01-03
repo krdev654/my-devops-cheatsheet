@@ -26,8 +26,8 @@ Kubernetes Commands:
     - kube-node-lease: to monitor the hearbeat of the nodes to track the availability
     - default:  default namespace for user created resources
     ```
-* 
- 
+* To create a custom namespace: `kubectl create namespace <custom-namespace>`
+* Using yaml's: under metadata `namespace: my-namespace`
  ----
  ### Create and configure deployments and services using YAML files
  ---
