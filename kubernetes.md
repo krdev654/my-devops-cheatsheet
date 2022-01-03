@@ -186,3 +186,6 @@ Notes:
     - POD - an abstraction of
       - Container
 ```
+
+* To create a base64 encoding from commandLine
+    - `echo -n '<plain-text>' | base64`
