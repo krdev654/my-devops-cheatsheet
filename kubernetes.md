@@ -63,6 +63,7 @@ Kubernetes Commands:
 
     ```
 * Apply the configuration using: `kubectl apply -f my-deployment.yaml` and `kubectl apply -f my-service.yaml`
+* To get the updated configuration of the deployment (with status): `kubectl get deployment nginx-deployment -o yaml`
 ------
 ### Sample startup application
 -----
