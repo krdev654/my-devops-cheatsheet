@@ -13,6 +13,7 @@ Kubernetes Commands:
   - To get the pod container creation status: `kubectl describe pod <pod-name>`
   - To ssh into a container/pod: `kubectl exec -it <pod-name> -- bin/bash`. `bin/bash` is the shell of the container
   - To delete a deployment: `kubectl delete deployment <deployment-name>`
+  - To watch the pod creation: `kubectl get pod --watch` or `kubectl describe pod <pod-name>`
  
  ----
  ### Create and configure deployments and services using YAML files
