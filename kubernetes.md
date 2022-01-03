@@ -26,8 +26,6 @@ Kubernetes Commands:
 * kubectl get deployment
 * kubectl get service
  
-* kubectl get pods -o wide
- 
 * kubectl explain pods
 * kubectl get pods -o wide
  
@@ -112,3 +110,13 @@ Kubernetes Commands:
  
 * docker push in28min/mmv2-currency-conversion-service:0.0.12-SNAPSHOT
 * docker push in28min/mmv2-currency-exchange-service:0.0.12-SNAPSHOT
+------------------------
+Notes:
+-----------------------
+
+```
+- Deployment manages 
+  - Replicaset manages
+    - POD - an abstraction of
+      - Container
+```
