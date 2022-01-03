@@ -14,6 +14,19 @@ Kubernetes Commands:
   - To ssh into a container/pod: `kubectl exec -it <pod-name> -- bin/bash`. `bin/bash` is the shell of the container
   - To delete a deployment: `kubectl delete deployment <deployment-name>`
   - To watch the pod creation: `kubectl get pod --watch` or `kubectl describe pod <pod-name>`
+
+---
+### Namespaces in kubernetes
+----
+* What's namespace - to organize resources into sub-groups/clusters
+* To get the namespaces: `kubectl get namespaces`
+    ```
+    - kube-system: system namespace for kubectl system resources
+    - kube-public: publically accessible resources/data. You can get them using: kubectl cluster-info
+    - kube-node-lease: to monitor the hearbeat of the nodes to track the availability
+    - default:  default namespace for user created resources
+    ```
+* 
  
  ----
  ### Create and configure deployments and services using YAML files
