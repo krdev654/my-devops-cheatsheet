@@ -1,7 +1,24 @@
 Kubernetes Commands:
 -------------
 * To check the version: `kubectl version`
+* To create a deployment: `kubectl create deployment <deployment-name> --image=<image-name>`
+* To manage and debug deployments: 
+  - Get: `kubectl get deployments`
+  - Describe: `kubectl describe deployment <deployment-name>`
+  - To get the replicaset: `kubectl get replicaset or kubectl get rs`
+  - Get Node details: `kubectl get nodes`
+  - To get the pod details: `kubectl get pods`
+  - To get services: `kubectl get services`
+  - To get logs: `kubectl logs <pod-name>`
+  - To get the pod container creation status: `kubectl describe pod <pod-name>`
+  - To ssh into a container/pod: `kubectl exec -it <pod-name> -- bin/bash`. `bin/bash` is the shell of the container
+  - To delete a deployment: `kubectl delete deployment <deployment-name>`
  
+
+------
+### Sample startup application
+-----
+
 * kubectl create deployment hello-world-rest-api --image=in28min/hello-world-rest-api:0.0.1.RELEASE
 * kubectl expose deployment hello-world-rest-api --type=LoadBalancer --port=8080
 * kubectl scale deployment hello-world-rest-api --replicas=3
