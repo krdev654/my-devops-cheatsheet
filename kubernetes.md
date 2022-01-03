@@ -218,3 +218,4 @@ Notes:
 * To spinoff a dashboard in minikube - `minikube dashboard`
 * To Start/stop/pause minikube cluster - `minikube start|stop|pause|unpause`
 * To clean up all the clusters in the minikube - `minikube delete --all`
+* For more details: https://minikube.sigs.k8s.io/docs/start/
