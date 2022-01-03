@@ -28,6 +28,16 @@ Kubernetes Commands:
     ```
 * To create a custom namespace: `kubectl create namespace <custom-namespace>`
 * Using yaml's: under metadata `namespace: my-namespace`
+* Resources can be shared across namespaces, but not the configMap and secret
+* To list resource bounded/not bounded to a namespace
+  - `kubectl api-resources --namespaced=false`
+  - `kubectl api-resources --namespaced=true`
+
+---
+### Create kubernetes dashboard
+----
+* `kubectl delete -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0/aio/deploy/recommended.yaml`
+* https://upcloud.com/community/tutorials/deploy-kubernetes-dashboard/
  ----
  ### Create and configure deployments and services using YAML files
  ---
