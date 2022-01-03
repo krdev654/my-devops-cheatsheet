@@ -15,7 +15,7 @@ Kubernetes Commands:
   - To delete a deployment: `kubectl delete deployment <deployment-name>`
  
  ----
- ### Create and configure deployments using YAML files
+ ### Create and configure deployments and services using YAML files
  ---
  * Define the deployment information in an YAML file. For example: 
     ```
@@ -45,7 +45,24 @@ Kubernetes Commands:
               - containerPort: 80
   
     ```
-* Apply the configuration using: `kubectl apply -f my-deployment.yaml`
+* Define a service yaml linking the deployment containers. For example:
+    ```
+      ### my-service.yaml
+      apiVersion: v1
+      kind: Service
+      metadata:
+        name: nginx-service
+      spec:
+        selector:
+          app: nginx
+        ports:
+        - protocol: TCP
+          port: 80
+          targetPort: 8080
+
+
+    ```
+* Apply the configuration using: `kubectl apply -f my-deployment.yaml` and `kubectl apply -f my-service.yaml`
 ------
 ### Sample startup application
 -----
